@@ -56,9 +56,22 @@ extension PersistencyManager {
         let data = try? String(contentsOf: url)
         if let str = data{
             let lines = str.components(separatedBy: "\n")
-            words = lines.map({ (first) -> Word in
-                return Word(first: first, second: "", ipa: "")
-            })
+            var tempWords = [Word]()
+            for line in lines{
+                if line == "" { continue }
+                let items = line.components(separatedBy: " ")
+                switch items.count{
+                case 1:
+                    tempWords.append(Word(first: items[0], second: "", ipa: ""))
+                case 2:
+                    tempWords.append(Word(first: items[0], second: items[1], ipa: ""))
+                case 3:
+                    tempWords.append(Word(first: items[0], second: items[1], ipa: items[2]))
+                default:
+                    continue
+                }
+            }
+            words = tempWords
         }
     }
     

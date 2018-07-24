@@ -13,6 +13,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var ipaLabel: NSTextField!
     @IBOutlet weak var firstLangLabel: NSTextField!
     @IBOutlet weak var secondLangLabel: NSTextField!
+    @IBOutlet weak var activativeBar: ActivativeBar!
     
     private var currentWordIndex = 0
     private var allWords = [Word]()
@@ -21,11 +22,12 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         view.window?.appearance = NSAppearance(named: .vibrantDark)
+        view.window?.delegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         allWords = WordBookAPI.shared.getWords()
         showWord(for: currentWordIndex)
     }
@@ -91,5 +93,12 @@ class ViewController: NSViewController {
         } else {
             return
         }
+    }
+}
+
+extension ViewController: NSWindowDelegate {
+    
+    func windowDidResize(_ notification: Notification) {
+        activativeBar.refreshTrackArea()
     }
 }

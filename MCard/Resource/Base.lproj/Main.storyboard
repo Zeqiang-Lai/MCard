@@ -167,8 +167,8 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="MCard" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="750" height="450"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="270"/>
                         <connections>
@@ -188,48 +188,48 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="450"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="MFE-2L-xRu">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="750" height="450"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zwx-DQ-uo6">
-                                        <rect key="frame" x="176" y="69" width="129" height="17"/>
+                                        <rect key="frame" x="287" y="136" width="176" height="24"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" title="ChinesePlaceholder" id="Rod-Td-Iqx">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="system" size="20"/>
                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-90-JsB">
-                                        <rect key="frame" x="118" y="106" width="245" height="85"/>
+                                        <rect key="frame" x="171" y="190" width="409" height="142"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="improve" id="NgL-M8-tGO">
-                                            <font key="font" metaFont="system" size="71"/>
+                                            <font key="font" metaFont="system" size="120"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZtY-97-mFO">
-                                        <rect key="frame" x="190" y="206" width="100" height="17"/>
+                                        <rect key="frame" x="308" y="347" width="135" height="24"/>
                                         <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" title="IPAPlaceholder" id="9CN-7W-Mr1">
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" metaFont="system" size="20"/>
                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TOO-90-JsB" firstAttribute="centerY" secondItem="MFE-2L-xRu" secondAttribute="centerY" multiplier="0.9" id="1sA-1m-Sno"/>
+                                    <constraint firstItem="TOO-90-JsB" firstAttribute="centerY" secondItem="MFE-2L-xRu" secondAttribute="centerY" multiplier="0.84" id="1sA-1m-Sno"/>
                                     <constraint firstItem="ZtY-97-mFO" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="3ng-Ws-RAQ"/>
-                                    <constraint firstItem="Zwx-DQ-uo6" firstAttribute="top" secondItem="TOO-90-JsB" secondAttribute="bottom" constant="20" id="6UB-gJ-Uuo"/>
+                                    <constraint firstItem="Zwx-DQ-uo6" firstAttribute="top" secondItem="TOO-90-JsB" secondAttribute="bottom" constant="30" id="6UB-gJ-Uuo"/>
                                     <constraint firstItem="TOO-90-JsB" firstAttribute="top" secondItem="ZtY-97-mFO" secondAttribute="bottom" constant="15" id="HfQ-9H-TMs"/>
                                     <constraint firstItem="Zwx-DQ-uo6" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="aKJ-BP-oL3"/>
                                     <constraint firstItem="TOO-90-JsB" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="lR8-BD-j6i"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="cQ3-gd-Rot" customClass="ActivativeBar" customModule="MCard" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="240" width="480" height="30"/>
+                                <rect key="frame" x="0.0" y="420" width="750" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="R4Y-WZ-yLh"/>
                                 </constraints>
@@ -246,6 +246,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activativeBar" destination="cQ3-gd-Rot" id="Iue-ir-tug"/>
                         <outlet property="firstLangLabel" destination="TOO-90-JsB" id="AE2-2B-YEV"/>
                         <outlet property="ipaLabel" destination="ZtY-97-mFO" id="2o7-8f-3M9"/>
                         <outlet property="secondLangLabel" destination="Zwx-DQ-uo6" id="gSt-W5-R67"/>
@@ -253,7 +254,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="644"/>
+            <point key="canvasLocation" x="203" y="740.5"/>
         </scene>
     </scenes>
 </document>
