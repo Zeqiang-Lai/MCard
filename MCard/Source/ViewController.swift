@@ -31,7 +31,7 @@ class ViewController: NSViewController {
     }
 
     func showWord(for wordIndex: Int) {
-        if wordIndex < 0 || wordIndex >= allWords.count - 1 {
+        if wordIndex < 0 || wordIndex >= allWords.count {
             return
         }
         
@@ -92,5 +92,4 @@ class ViewController: NSViewController {
             return
         }
     }
-    
 }

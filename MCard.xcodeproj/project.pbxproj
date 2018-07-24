@@ -16,6 +16,7 @@
 		46155265210619F800A571A2 /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46155264210619F800A571A2 /* PersistencyManager.swift */; };
 		4615526721061A0600A571A2 /* WordBookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615526621061A0600A571A2 /* WordBookAPI.swift */; };
 		4615526A21061B5C00A571A2 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615526921061B5C00A571A2 /* UserSetting.swift */; };
+		46537CBC21072C0F009A43A8 /* ActivativeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46537CBB21072C0F009A43A8 /* ActivativeBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		46155264210619F800A571A2 /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		4615526621061A0600A571A2 /* WordBookAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBookAPI.swift; sourceTree = "<group>"; };
 		4615526921061B5C00A571A2 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
+		46537CBB21072C0F009A43A8 /* ActivativeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivativeBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				46155261210619DF00A571A2 /* BackgroundView.swift */,
+				46537CBB21072C0F009A43A8 /* ActivativeBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				4615524C2106139F00A571A2 /* ViewController.swift in Sources */,
 				46155265210619F800A571A2 /* PersistencyManager.swift in Sources */,
 				4615524A2106139F00A571A2 /* AppDelegate.swift in Sources */,
+				46537CBC21072C0F009A43A8 /* ActivativeBar.swift in Sources */,
 				4615526A21061B5C00A571A2 /* UserSetting.swift in Sources */,
 				4615526721061A0600A571A2 /* WordBookAPI.swift in Sources */,
 				46155262210619DF00A571A2 /* BackgroundView.swift in Sources */,
