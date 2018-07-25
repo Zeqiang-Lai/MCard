@@ -15,6 +15,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var secondLangLabel: NSTextField!
     @IBOutlet weak var activativeBar: ActivativeBar!
     
+    @IBOutlet weak var firstLabelYconstraint: NSLayoutConstraint!
+    
+    
     private var currentWordIndex = 0
     private var allWords = [Word]()
     
@@ -40,6 +43,12 @@ class ViewController: NSViewController {
         ipaLabel.stringValue = allWords[wordIndex].ipa
         firstLangLabel.stringValue = allWords[wordIndex].first
         secondLangLabel.stringValue = allWords[wordIndex].second
+        
+        // TODO: 这个constant值可以用计算的
+        firstLabelYconstraint.animator().constant = -10
+        if secondLangLabel.stringValue == "" {
+            firstLabelYconstraint.animator().constant = -25
+        }
     }
     
     // MARK: Appearance
@@ -93,6 +102,13 @@ class ViewController: NSViewController {
         } else {
             return
         }
+    }
+}
+
+extension ViewController {
+    enum Constant {
+        static let oneLabelConstraintMultiplier = 0.84
+        static let twoLabelConstraintMultiplier = 0.95
     }
 }
 

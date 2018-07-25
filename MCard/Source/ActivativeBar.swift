@@ -32,13 +32,11 @@ class ActivativeBar: NSView {
     override func mouseEntered(with event: NSEvent) {
         let styleMask: NSWindow.StyleMask = [.closable, .titled, .resizable, .miniaturizable, .fullSizeContentView]
         self.window?.animator().styleMask = styleMask
-//        self.window?.animator().titleVisibility = NSWindow.TitleVisibility.visible
     }
     
     override func mouseExited(with event: NSEvent) {
         let styleMask: NSWindow.StyleMask = [.titled, .fullSizeContentView]
         self.window?.animator().styleMask = styleMask
-//        self.window?.animator().titleVisibility = NSWindow.TitleVisibility.hidden
     }
     
 }
