@@ -15,6 +15,8 @@ class ViewController: NSViewController {
     @IBOutlet weak var secondLangLabel: NSTextField!
     @IBOutlet weak var activativeBar: ActivativeBar!
     
+    @IBOutlet weak var gestureView: GestureView!
+    
     @IBOutlet weak var firstLabelYconstraint: NSLayoutConstraint!
     
     
@@ -30,6 +32,8 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        gestureView.delegate = self
         
         allWords = WordBookAPI.shared.getWords()
         showWord(for: currentWordIndex)
@@ -62,7 +66,7 @@ class ViewController: NSViewController {
             NSAppearance(named: .vibrantDark) : NSAppearance(named: .vibrantLight)
     }
     
-    // MARK: Control
+    // MARK: Keyboard Control
     
     @IBAction func nextWord(_ sender:AnyObject) {
         currentWordIndex = nextWordIndex()
@@ -82,7 +86,7 @@ class ViewController: NSViewController {
         return currentWordIndex == 0 ? currentWordIndex : currentWordIndex - 1
     }
     
-    // MARK: Open Book Source
+    // MARK: Open File Dialog
     
     @IBAction func openWordBook(_ sender: AnyObject) {
         let dialog = NSOpenPanel()
@@ -103,6 +107,32 @@ class ViewController: NSViewController {
             return
         }
     }
+}
+
+// MARK: Two finger Swipe Gesture Handler
+
+extension ViewController: GestureViewEventHandler {
+    func twoFingerSwipe(deltaX: CGFloat) {
+        if deltaX > 0.5 {
+            // previous word
+            if previousWordIndex() == currentWordIndex {return}
+            firstLangLabel.horizontalTransitionAnimation(direction: kCATransitionFromLeft)
+            secondLangLabel.horizontalTransitionAnimation(direction: kCATransitionFromLeft)
+            ipaLabel.horizontalTransitionAnimation(direction: kCATransitionFromLeft)
+            currentWordIndex = previousWordIndex()
+            showWord(for: currentWordIndex)
+        } else if deltaX < -0.5 {
+            // next word
+            if nextWordIndex() == currentWordIndex {return}
+            firstLangLabel.horizontalTransitionAnimation(direction: kCATransitionFromRight)
+            secondLangLabel.horizontalTransitionAnimation(direction: kCATransitionFromRight)
+            ipaLabel.horizontalTransitionAnimation(direction: kCATransitionFromRight)
+            currentWordIndex = nextWordIndex()
+            showWord(for: currentWordIndex)
+        }
+    }
+    
+    
 }
 
 extension ViewController {

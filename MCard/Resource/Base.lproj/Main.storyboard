@@ -193,6 +193,9 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="MFE-2L-xRu">
                                 <rect key="frame" x="0.0" y="0.0" width="750" height="450"/>
                                 <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Wx0-mH-Ski" customClass="GestureView" customModule="MCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="750" height="450"/>
+                                    </customView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zwx-DQ-uo6">
                                         <rect key="frame" x="287" y="125" width="176" height="24"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" title="ChinesePlaceholder" id="Rod-Td-Iqx">
@@ -223,8 +226,12 @@
                                     <constraint firstItem="ZtY-97-mFO" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="3ng-Ws-RAQ"/>
                                     <constraint firstItem="Zwx-DQ-uo6" firstAttribute="top" secondItem="TOO-90-JsB" secondAttribute="bottom" constant="30" id="6UB-gJ-Uuo"/>
                                     <constraint firstItem="TOO-90-JsB" firstAttribute="top" secondItem="ZtY-97-mFO" secondAttribute="bottom" constant="15" id="HfQ-9H-TMs"/>
+                                    <constraint firstItem="Wx0-mH-Ski" firstAttribute="leading" secondItem="MFE-2L-xRu" secondAttribute="leading" id="RFw-ck-GLq"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wx0-mH-Ski" secondAttribute="bottom" id="SmE-RX-FES"/>
                                     <constraint firstItem="Zwx-DQ-uo6" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="aKJ-BP-oL3"/>
+                                    <constraint firstItem="Wx0-mH-Ski" firstAttribute="top" secondItem="MFE-2L-xRu" secondAttribute="top" id="gSD-0E-a45"/>
                                     <constraint firstItem="TOO-90-JsB" firstAttribute="centerX" secondItem="MFE-2L-xRu" secondAttribute="centerX" id="lR8-BD-j6i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wx0-mH-Ski" secondAttribute="trailing" id="mKG-rL-Zta"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="cQ3-gd-Rot" customClass="ActivativeBar" customModule="MCard" customModuleProvider="target">
@@ -248,13 +255,14 @@
                         <outlet property="activativeBar" destination="cQ3-gd-Rot" id="Iue-ir-tug"/>
                         <outlet property="firstLabelYconstraint" destination="1sA-1m-Sno" id="iad-P2-J3S"/>
                         <outlet property="firstLangLabel" destination="TOO-90-JsB" id="AE2-2B-YEV"/>
+                        <outlet property="gestureView" destination="Wx0-mH-Ski" id="aZc-B8-8ey"/>
                         <outlet property="ipaLabel" destination="ZtY-97-mFO" id="2o7-8f-3M9"/>
                         <outlet property="secondLangLabel" destination="Zwx-DQ-uo6" id="gSt-W5-R67"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="740.5"/>
+            <point key="canvasLocation" x="122" y="913"/>
         </scene>
     </scenes>
 </document>

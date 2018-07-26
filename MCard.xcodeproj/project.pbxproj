@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46125E17210A0726003EC106 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46125E16210A0726003EC106 /* GestureView.swift */; };
+		46125E1A210A074B003EC106 /* NSView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46125E19210A074B003EC106 /* NSView+Animation.swift */; };
 		4615524A2106139F00A571A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461552492106139F00A571A2 /* AppDelegate.swift */; };
 		4615524C2106139F00A571A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615524B2106139F00A571A2 /* ViewController.swift */; };
 		4615524E210613A000A571A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615524D210613A000A571A2 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46125E16210A0726003EC106 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
+		46125E19210A074B003EC106 /* NSView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Animation.swift"; sourceTree = "<group>"; };
 		461552462106139F00A571A2 /* MCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461552492106139F00A571A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4615524B2106139F00A571A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46125E18210A0737003EC106 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				46125E19210A074B003EC106 /* NSView+Animation.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		4615523D2106139F00A571A2 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +86,7 @@
 		4615525A210614A800A571A2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				46125E18210A0737003EC106 /* Extension */,
 				4615526821061B4E00A571A2 /* Misc. */,
 				46155263210619EE00A571A2 /* API */,
 				4615525E2106153000A571A2 /* Models */,
@@ -106,6 +119,7 @@
 		4615525D2106152A00A571A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				46125E16210A0726003EC106 /* GestureView.swift */,
 				46155261210619DF00A571A2 /* BackgroundView.swift */,
 				46537CBB21072C0F009A43A8 /* ActivativeBar.swift */,
 			);
@@ -209,6 +223,8 @@
 			files = (
 				4615524C2106139F00A571A2 /* ViewController.swift in Sources */,
 				46155265210619F800A571A2 /* PersistencyManager.swift in Sources */,
+				46125E1A210A074B003EC106 /* NSView+Animation.swift in Sources */,
+				46125E17210A0726003EC106 /* GestureView.swift in Sources */,
 				4615524A2106139F00A571A2 /* AppDelegate.swift in Sources */,
 				46537CBC21072C0F009A43A8 /* ActivativeBar.swift in Sources */,
 				4615526A21061B5C00A571A2 /* UserSetting.swift in Sources */,
