@@ -55,11 +55,17 @@ extension PersistencyManager {
     func parseTxt(from url: URL) {
         let data = try? String(contentsOf: url)
         if let str = data{
-            let lines = str.components(separatedBy: "\n")
+            var lines = str.components(separatedBy: "\n")
             var tempWords = [Word]()
+            
+            var lineSeperator = " "
+            if let firstLine = lines.first, firstLine == "\t" {
+                lineSeperator = "\t"
+            }
+            lines.removeFirst()
             for line in lines{
                 if line == "" { continue }
-                let items = line.components(separatedBy: " ")
+                let items = line.components(separatedBy: lineSeperator)
                 switch items.count{
                 case 1:
                     tempWords.append(Word(first: items[0], second: "", ipa: ""))

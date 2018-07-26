@@ -45,9 +45,9 @@ class ViewController: NSViewController {
         secondLangLabel.stringValue = allWords[wordIndex].second
         
         // TODO: 这个constant值可以用计算的
-        firstLabelYconstraint.animator().constant = -10
+        firstLabelYconstraint.animator().constant = -25
         if secondLangLabel.stringValue == "" {
-            firstLabelYconstraint.animator().constant = -25
+            firstLabelYconstraint.animator().constant = -15
         }
     }
     
