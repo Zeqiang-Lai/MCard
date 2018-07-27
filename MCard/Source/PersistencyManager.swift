@@ -9,6 +9,11 @@
 import Foundation
 
 final class PersistencyManager {
+    
+    enum Constant {
+        static let defaultTxtSeperator = " "
+    }
+    
     private var words = [Word]()
     
     init() {
@@ -59,18 +64,19 @@ extension PersistencyManager {
             var tempWords = [Word]()
             
             // Determine the seperator
-            var lineSeperator = " "
+            var lineSeperator = Constant.defaultTxtSeperator
             if let firstLine = lines.first, !firstLine.containsLetters(){
                 lineSeperator = firstLine
                 lines.removeFirst()
             }
-
+            let priorSeperator = lineSeperator
+            
             for line in lines{
                 if line == "" { continue }
                 
                 if line.contains("\t") { lineSeperator = "\t" }
                 let items = line.components(separatedBy: lineSeperator)
-                lineSeperator = " "
+                lineSeperator = priorSeperator
                 
                 switch items.count{
                 case 1:
