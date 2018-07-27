@@ -58,11 +58,13 @@ extension PersistencyManager {
             var lines = str.components(separatedBy: "\n")
             var tempWords = [Word]()
             
+            // Determine the seperator
             var lineSeperator = " "
             if let firstLine = lines.first, firstLine == "\t" {
                 lineSeperator = "\t"
+                lines.removeFirst()
             }
-            lines.removeFirst()
+
             for line in lines{
                 if line == "" { continue }
                 let items = line.components(separatedBy: lineSeperator)
