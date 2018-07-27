@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46125E17210A0726003EC106 /* GestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46125E16210A0726003EC106 /* GestureView.swift */; };
 		46125E1A210A074B003EC106 /* NSView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46125E19210A074B003EC106 /* NSView+Animation.swift */; };
+		4615325E210B42D400146F95 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615325D210B42D400146F95 /* String+.swift */; };
 		4615524A2106139F00A571A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461552492106139F00A571A2 /* AppDelegate.swift */; };
 		4615524C2106139F00A571A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4615524B2106139F00A571A2 /* ViewController.swift */; };
 		4615524E210613A000A571A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4615524D210613A000A571A2 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		46125E16210A0726003EC106 /* GestureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureView.swift; sourceTree = "<group>"; };
 		46125E19210A074B003EC106 /* NSView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Animation.swift"; sourceTree = "<group>"; };
+		4615325D210B42D400146F95 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		461552462106139F00A571A2 /* MCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461552492106139F00A571A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4615524B2106139F00A571A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				46125E19210A074B003EC106 /* NSView+Animation.swift */,
+				4615325D210B42D400146F95 /* String+.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				4615524A2106139F00A571A2 /* AppDelegate.swift in Sources */,
 				46537CBC21072C0F009A43A8 /* ActivativeBar.swift in Sources */,
 				4615526A21061B5C00A571A2 /* UserSetting.swift in Sources */,
+				4615325E210B42D400146F95 /* String+.swift in Sources */,
 				4615526721061A0600A571A2 /* WordBookAPI.swift in Sources */,
 				46155262210619DF00A571A2 /* BackgroundView.swift in Sources */,
 				461552602106154000A571A2 /* Word.swift in Sources */,

@@ -60,14 +60,18 @@ extension PersistencyManager {
             
             // Determine the seperator
             var lineSeperator = " "
-            if let firstLine = lines.first, firstLine == "\t" {
-                lineSeperator = "\t"
+            if let firstLine = lines.first, !firstLine.containsLetters(){
+                lineSeperator = firstLine
                 lines.removeFirst()
             }
 
             for line in lines{
                 if line == "" { continue }
+                
+                if line.contains("\t") { lineSeperator = "\t" }
                 let items = line.components(separatedBy: lineSeperator)
+                lineSeperator = " "
+                
                 switch items.count{
                 case 1:
                     tempWords.append(Word(first: items[0], second: "", ipa: ""))
