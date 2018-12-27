@@ -2,7 +2,7 @@
 
 一个简约的背单词软件，支持文件导入词书（使用纯文本格式）。
 
-<img src="image/logo.png" alt="logo" width="200" />
+<img src="Image/logo.png" alt="logo" width="200" />
 
 ## Preview
 
