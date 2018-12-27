@@ -17,4 +17,4 @@
 
 仅支持Macos平台：
 
-在Release页面，或者[点击此处]()下载。
+在Release页面，或者[点击此处](https://github.com/Zeqiang-Lai/MCard/releases/latest)下载。
